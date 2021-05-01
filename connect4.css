@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Lato;
+  text-align: center;
+  background-color: red;
+}
+
+main {
+  background-color: white;
+  margin: 40px auto;
+  width: 80%;
+  height: 650px;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+h1 {
+  color: #00008b;
+  font-size: 80px;
+  margin: 10px;
+}
+
+button {
+  width: 200px;
+  margin: 20px 70px;
+  background-color: yellow;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: Lato;
+  font-size: 20px;
+}
+
+input {
+  font-family: Lato;
+  padding: 2px;
+  margin: 0 10px;
+}
+
+/* game board table */
+
+#board {
+  overflow: hidden;
+  width: 364px;
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+#board td {
+  position: relative;
+  background-color: #00008b;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+}
+
+.cell-hole {
+  background-color: white;
+  margin: 7px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+.piece {
+  position: absolute;
+  top: 0;
+  margin: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  animation: drop 0.5s linear;
+}
+
+/* make pieces  to drop from the top of the board */
+@keyframes drop {
+  from {top: -450px}
+  to {top: 0}
+}
+
+#winner {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+  font-size: 100px;
+  width: 75%;
+  margin: auto;
+  opacity: 0.9;
+  color: #black;
+  font-weight: bold;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+  background-color: white;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+
